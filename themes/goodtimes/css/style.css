@@ -6,7 +6,7 @@
  }
  .goodtimes-header{
      height:465px;
-     background: url('/themes/goodtimes/images/slides-new/three.jpg');
+     background: url('/drupal/themes/goodtimes/images/slides-new/three.jpg');
      background-size: cover;    
  }
  .navbar-override{
