@@ -1,0 +1,30 @@
+/**
+ * Place your custom styles here.
+ */
+ body{
+     margin: 0;
+ }
+ .goodtimes-header{
+     height:465px;
+     background: url('/themes/goodtimes/images/slides-new/three.jpg');
+     background-size: cover;    
+ }
+ .navbar-override{
+     margin-bottom: 0;
+ }
+.article-preview{
+    height: 200px;
+}
+
+.article-preview h4{
+    height: 20%;
+}
+.article-preview .article-preview-body{
+    height: 60%;
+    overflow: hidden;
+}
+
+.article-preview-row{
+    width:75%;
+    margin:auto;
+}
