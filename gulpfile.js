@@ -5,6 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var less = require('gulp-less');
 
 gulp.task('imagemin', function () {
     return gulp.src('./themes/goodtimes/images/*')
@@ -23,8 +24,15 @@ gulp.task('uglify', function() {
     .pipe(gulp.dest('./themes/goodtimes/js'))
 });
 
+gulp.task('less', function () {
+  return gulp.src('./themes/goodtimes/css/*.less')
+    .pipe(less())
+    .pipe(gulp.dest('./themes/goodtimes/css'));
+});
+
 gulp.task('watch', function(){
         livereload.listen();
+        gulp.watch('./themes/goodtimes/css/*.less', ['less']);
         gulp.watch('./themes/goodtimes/lib/*.js', ['uglify']);
         gulp.watch(['./themes/goodtimes/css/style.css', './themes/goodtimes/**/*.twig', './themes/goodtimes/js/*.js'], function (files){
         livereload.changed(files)
