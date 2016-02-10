@@ -11,6 +11,20 @@ body {
 }
 .navbar-override {
   margin-bottom: 0;
+  background: rgba(91, 217, 209, 0.5);
+  /* for latest browsers */
+  border: none;
+}
+.nav-button-override {
+  margin: 10px 5px;
+  font-size: 1.5em;
+  width: 100px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-logo-override {
+  margin-top: 25px;
 }
 .article-preview {
   margin: 20px 40px;

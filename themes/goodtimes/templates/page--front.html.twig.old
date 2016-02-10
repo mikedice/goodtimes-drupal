@@ -1,5 +1,4 @@
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-  <div class='goodtimes-header'>
 {# Navbar #}
 {% if page.navigation %}
   {% block navbar %}
@@ -13,8 +12,7 @@
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       <div class="navbar-header">
-        {#{{ page.navigation.goodtimes_branding }}#}
-        {{page.navigation}}
+        {{ page.navigation }}
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
@@ -34,12 +32,7 @@
     </header>
   {% endblock %}
 {% endif %}
-
-
-
-
-</div>
-
+      <div class='goodtimes-header'></div>
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
